@@ -41,6 +41,13 @@ public class Utilities {
        }
        return sb.toString();
     }
+    
+    public long generateStreamID(short s1, short s2, short s3, short s4) {
+        return ((long) (s1 & 0xFFFF) << 48) |
+               ((long) (s2 & 0xFFFF) << 32) |
+               ((long) (s3 & 0xFFFF) << 16) |
+               ((long) (s4 & 0xFFFF));
+    }
    
 	public byte[] getBytesFromBoolean(boolean value) {
 
